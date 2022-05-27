@@ -1,0 +1,107 @@
+# Nmap 7.92 scan initiated Thu May 26 12:56:46 2022 as: /snap/nmap/2629/bin/nmap -sCV -p 22,80 -oA service_scan.nmap 10.10.11.148
+Nmap scan report for 10.10.11.148
+Host is up (0.066s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     (protocol 2.0)
+| fingerprint-strings: 
+|   NULL: 
+|_    SSH-2.0-RouterSpace Packet Filtering V1
+| ssh-hostkey: 
+|   3072 f4:e4:c8:0a:a6:af:66:93:af:69:5a:a9:bc:75:f9:0c (RSA)
+|   256 7f:05:cd:8c:42:7b:a9:4a:b2:e6:35:2c:c4:59:78:02 (ECDSA)
+|_  256 2f:d7:a8:8b:be:2d:10:b0:c9:b4:29:52:a8:94:24:78 (ED25519)
+80/tcp open  http
+|_http-title: RouterSpace
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 200 OK
+|     X-Powered-By: RouterSpace
+|     X-Cdn: RouterSpace-37294
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 73
+|     ETag: W/"49-dGOkKC/Dhx1ujvuUA49u1nJy9rs"
+|     Date: Thu, 26 May 2022 10:56:54 GMT
+|     Connection: close
+|     Suspicious activity detected !!! {RequestID: o9s UC V oc AAbJfPQ }
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     X-Powered-By: RouterSpace
+|     X-Cdn: RouterSpace-51005
+|     Accept-Ranges: bytes
+|     Cache-Control: public, max-age=0
+|     Last-Modified: Mon, 22 Nov 2021 11:33:57 GMT
+|     ETag: W/"652c-17d476c9285"
+|     Content-Type: text/html; charset=UTF-8
+|     Content-Length: 25900
+|     Date: Thu, 26 May 2022 10:56:52 GMT
+|     Connection: close
+|     <!doctype html>
+|     <html class="no-js" lang="zxx">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="x-ua-compatible" content="ie=edge">
+|     <title>RouterSpace</title>
+|     <meta name="description" content="">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <link rel="stylesheet" href="css/bootstrap.min.css">
+|     <link rel="stylesheet" href="css/owl.carousel.min.css">
+|     <link rel="stylesheet" href="css/magnific-popup.css">
+|     <link rel="stylesheet" href="css/font-awesome.min.css">
+|     <link rel="stylesheet" href="css/themify-icons.css">
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     X-Powered-By: RouterSpace
+|     X-Cdn: RouterSpace-27635
+|     Allow: GET,HEAD,POST
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 13
+|     ETag: W/"d-bMedpZYGrVt1nR4x+qdNZ2GqyRo"
+|     Date: Thu, 26 May 2022 10:56:53 GMT
+|     Connection: close
+|     GET,HEAD,POST
+|   RTSPRequest, X11Probe: 
+|     HTTP/1.1 400 Bad Request
+|_    Connection: close
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port22-TCP:V=7.92%I=7%D=5/26%Time=628F5CF4%P=x86_64-unknown-linux-gnu%r
+SF:(NULL,29,"SSH-2\.0-RouterSpace\x20Packet\x20Filtering\x20V1\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.92%I=7%D=5/26%Time=628F5CF4%P=x86_64-unknown-linux-gnu%r
+SF:(GetRequest,14FC,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20RouterSpac
+SF:e\r\nX-Cdn:\x20RouterSpace-51005\r\nAccept-Ranges:\x20bytes\r\nCache-Co
+SF:ntrol:\x20public,\x20max-age=0\r\nLast-Modified:\x20Mon,\x2022\x20Nov\x
+SF:202021\x2011:33:57\x20GMT\r\nETag:\x20W/\"652c-17d476c9285\"\r\nContent
+SF:-Type:\x20text/html;\x20charset=UTF-8\r\nContent-Length:\x2025900\r\nDa
+SF:te:\x20Thu,\x2026\x20May\x202022\x2010:56:52\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<!doctype\x20html>\n<html\x20class=\"no-js\"\x20lang=\"zxx\
+SF:">\n<head>\n\x20\x20\x20\x20<meta\x20charset=\"utf-8\">\n\x20\x20\x20\x
+SF:20<meta\x20http-equiv=\"x-ua-compatible\"\x20content=\"ie=edge\">\n\x20
+SF:\x20\x20\x20<title>RouterSpace</title>\n\x20\x20\x20\x20<meta\x20name=\
+SF:"description\"\x20content=\"\">\n\x20\x20\x20\x20<meta\x20name=\"viewpo
+SF:rt\"\x20content=\"width=device-width,\x20initial-scale=1\">\n\n\x20\x20
+SF:\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"css/bootstrap\.min\.css\"
+SF:>\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"css/owl\.carou
+SF:sel\.min\.css\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\
+SF:"css/magnific-popup\.css\">\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\
+SF:"\x20href=\"css/font-awesome\.min\.css\">\n\x20\x20\x20\x20<link\x20rel
+SF:=\"stylesheet\"\x20href=\"css/themify-icons\.css\">\n\x20")%r(HTTPOptio
+SF:ns,108,"HTTP/1\.1\x20200\x20OK\r\nX-Powered-By:\x20RouterSpace\r\nX-Cdn
+SF::\x20RouterSpace-27635\r\nAllow:\x20GET,HEAD,POST\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=utf-8\r\nContent-Length:\x2013\r\nETag:\x20W/\"d-b
+SF:MedpZYGrVt1nR4x\+qdNZ2GqyRo\"\r\nDate:\x20Thu,\x2026\x20May\x202022\x20
+SF:10:56:53\x20GMT\r\nConnection:\x20close\r\n\r\nGET,HEAD,POST")%r(RTSPRe
+SF:quest,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\
+SF:n\r\n")%r(X11Probe,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection
+SF::\x20close\r\n\r\n")%r(FourOhFourRequest,12F,"HTTP/1\.1\x20200\x20OK\r\
+SF:nX-Powered-By:\x20RouterSpace\r\nX-Cdn:\x20RouterSpace-37294\r\nContent
+SF:-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2073\r\nETag:
+SF:\x20W/\"49-dGOkKC/Dhx1ujvuUA49u1nJy9rs\"\r\nDate:\x20Thu,\x2026\x20May\
+SF:x202022\x2010:56:54\x20GMT\r\nConnection:\x20close\r\n\r\nSuspicious\x2
+SF:0activity\x20detected\x20!!!\x20{RequestID:\x20o9s\x20UC\x20V\x20oc\x20
+SF:\x20AAbJfPQ\x20}\n\n\n\n\n\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May 26 12:57:14 2022 -- 1 IP address (1 host up) scanned in 28.74 seconds

